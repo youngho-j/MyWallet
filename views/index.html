@@ -12,6 +12,7 @@
 	<script type="text/javascript" src="js/web3.min.js"></script>
 	<script type="text/javascript" src="js/ethereumjs-tx-1.3.3.min.js"></script>
 	<script src="https://code.jquery.com/jquery-latest.js "></script>
+	<link href="css/jumbotron-narrow.css" rel="stylesheet" type="text/css">
 
 	<!-- bootsrtap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -93,31 +94,62 @@
 </head>
 
 <body>
-	<br>
-	<br>
-	<div class="container " role="main">
-		<h2><strong> My Ethereum Wallet </strong></h2>
-		<div id="tablePlace"></div>
-		<button id="newAccount">New Account</button>
-		<button id="getbalance">get balance</button>
-		<button id="send">send token</button>
-		<h5>송신처 <input id="fromaddress" size="45" placeholder="보내는 계좌번호를 입력하세요."></input></h5>
-		<h5>수신처 <input id="toaddress" size="45" placeholder="받는 계좌번호를 입력하세요."></input></h5>
-		<h5>코인 <input id="amount" size="20" pattern="[0-9]+" placeholder="코인 수량을 입력하세요."></input></h5>
-		<h5>비밀번호 <input id="mypassword" type="password" size="60" placeholder="계좌 비밀번호를 입력하세요."></input></h5>
-		
+	<div class="header">
+		<nav>
+			<ul class="nav nav-pills pull-right">
+				<li role="presentation" class="active"><a href="#">Home</a></li>
+				<li role="presentation"><a href="#">About</a></li>
+				<li role="presentation"><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+		<h3 class="text-muted">Ethereum Wallet</h3>
 	</div>
-	<br>
-	<br>
-	<div class="container " role="main">
-		<h4><strong> Message </strong></h4>
-		<div id="message"></div>
-	</div>
-	<hr>
-	<footer class="py-5 bg-dark">
-		<div class="container">
-			<p class="m-0 text-center text-white"><b>for education. </b></p>
+	<div class="jumbotron">
+		<div class="body">
+			<h1>My Ethereum Wallet</h1>
+			<button id="newAccount" class="btn btn-primary">New Account</button>
+			<button id="getbalance" class="btn btn-primary">get balance</button>
+			<button id="send" class="btn btn-primary">send token</button>
 		</div>
+		<form>
+			<div class="form-group row">
+				<label for="fromaddress" class="col-md-5 col-form-label text-right">송신처</label>
+				<div class="col-md-3">
+					<input id="fromaddress" class="form-control" placeholder="보내는 계좌번호를 입력하세요.">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="fromaddress" class="col-md-5 col-form-label text-right">수신처</label>
+				<div class="col-md-3">
+					<input id="toaddress" class="form-control" placeholder="받는 계좌번호를 입력하세요.">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="fromaddress" class="col-md-5 col-form-label text-right">코인</label>
+				<div class="col-md-3">
+					<input id="amount" class="form-control" pattern="[0-9]+" placeholder="코인 수량을 입력하세요.">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="fromaddress" class="col-md-5 col-form-label text-right">비밀번호</label>
+				<div class="col-md-3">
+					<input id="mypassword" class="form-control" type="password" placeholder="계좌 비밀번호를 입력하세요.">
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div class="row marketing">
+		<div class="col-lg-6">
+			<h4><strong> Message </strong></h4>
+			<div id="message"></div>
+		</div>
+		<div class="col-lg-6">
+		</div>
+	</div>
+
+	<footer class="py-5 bg-dark">
+		<p class="m-0 text-center text-white"><b>for education. </b></p>
 	</footer>
 </body>
 
